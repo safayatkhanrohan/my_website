@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" initial-scale="1.0">
+<title></title>
+<style type="text/css">
+*{
+box-sizing:border-box;
+}
+.container{
+background-color:grey;
+width:400px;
+padding:20px;
+margin:0 auto;
+}
+.container ul{
+margin:0 auto;
+margin-left:-20px;
+}
+.container li{
+list-style-type:none;
+margin:50px 0;
+font-weight:bolder;
+text-transform:uppercase;
+position:relative;
+}
+.container li::before{
+content: '';
+position:absolute;
+top:calc(100% + 5px);
+background-color:rgb(170,167,173);
+width:100%;
+height:25px;
+border-radius:20px;
+}
+.container li::after{
+content: '';
+position:absolute;
+top:calc(100% + 5px);
+background-color:white;
+left:0px;
+width:0%;
+height:25px;
+border-radius:20px;
+animation-duration:3s;
+animation-timing-function:linear;
+animation-delay:1s;
+animation-iteration-count:infinite;
+animation-direction:forword;
+}
+.html::after{
+animation-name:html;
+}
+.css::after{
+animation-name:css;
+}
+.js::after{
+animation-name:js;
+}
+.bstp::after{
+animation-name:bstp;
+}
+.jquery::after{
+animation-name:jquery;
+}
+.c::after{
+animation-name:cpp;
+}
+@keyframes html{
+   to{
+      width:90%;
+      background-color:orange;
+   }
+}
+@keyframes css{
+   to{
+      width:80%;
+      background-color:#fdee00;
+   }
+}
+@keyframes js{
+   to{
+      width:40%;
+      background-color:#fab0be;
+   }
+}
+@keyframes bstp{
+   to{
+      width:50%;
+      background-color:#e52b50;
+   }
+}
+@keyframes jquery{
+   to{
+      width:70%;
+      background-color:#b0bf1a;
+   }
+}
+@keyframes cpp{
+   to{
+      width:85%;
+      background-color:#00ffff;
+   }
+}
+@media screen and (max-width:400px){
+.container{
+width:100%;
+padding-left:0;
+}
+.container ul{
+margin:-40px 0px -10px -20px;
+}
+}
+</style>
+</head>
+<body>
+   <div class="container">
+        <ul>
+            <li class="html">html</li>
+            <li class="css"> css </li>
+            <li class="js"> Javascript</li>
+            <li class="bstp"> bootstrap </li>
+            <li class="jquery"> jquery </li>
+            <li class="c"> c++</li>
+        </ul>
+   </div>
+</body>
+</html>
